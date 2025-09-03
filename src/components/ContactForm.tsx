@@ -21,7 +21,7 @@ export default function ContactForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!firstName || !lastName || !email) {
-      alert("Please fill in all required fields.");
+      alert("Please fill in all required fields tesdt.");
       return;
     }
 
@@ -58,7 +58,7 @@ export default function ContactForm() {
                 "& .MuiInputLabel-root": { color: "#000000ff" },
                 "& .MuiInputBase-input": { color: "#000000" },
               }}
-            />sad
+            />
             <TextField
               fullWidth
               id="lastname"
@@ -127,6 +127,7 @@ export default function ContactForm() {
         open={open}
         autoHideDuration={4000}
         onClose={() => setOpen(false)}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
       >
         <Alert
           severity="success"
