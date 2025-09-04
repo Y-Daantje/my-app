@@ -1,7 +1,8 @@
 // src/components/Navbar.tsx
 import * as React from "react";
-
 import AppBar from "@mui/material/AppBar";
+import { Button } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
@@ -14,6 +15,7 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
+
 
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -142,6 +144,27 @@ export default function Navbar() {
             Dashboard
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
+
+          {/* Add this new Link component */}
+         
+    <Box sx={{ display: 'flex', gap: 2, mr: 2 }}>
+  <Button
+    component={RouterLink}
+    to="/"
+    color="inherit"
+    sx={{ textDecoration: 'none' }}
+  >
+    Home
+  </Button>
+  <Button
+    component={RouterLink}
+    to="/demo"
+    color="inherit"
+    sx={{ textDecoration: 'none' }}
+  >
+    Demo Page
+  </Button>
+</Box>
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <IconButton
               size="large"
